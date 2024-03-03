@@ -1,6 +1,5 @@
-<h1><%= @publisher.name %></h1>
-
-<p>Games published by <%= @publisher.name%>:</p>
+<h2 class="title is-2"><%= @publisher.name %></h2>
+<h4 class="subtitle is-4">Games published by <%= @publisher.name%>:</h4>
 
 <ul>
     <% @publisher.video_games.each do |vg| %>

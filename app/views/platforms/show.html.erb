@@ -1,6 +1,5 @@
-<h1><%= @platform.name %></h1>
-
-<p>Games available on <%= @platform.name%>:</p>
+<h2 class="title is-2"><%= @platform.name %></h2>
+<h4 class="subtitle is-4">Games available on <%= @platform.name%>:</h4>
 
 <ul>
     <% @platform.video_games.each do |vg| %>

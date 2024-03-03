@@ -1,13 +1,12 @@
-<h1><%= @video_game.name %></h1>
+<h4 class="title is-4"><%= @video_game.name %></h4>
 
-<p>Developed by: <%= link_to @video_game.developer.name, @video_game.developer %></p>
-<p>Published by: <%= link_to @video_game.publisher.name, @video_game.publisher %></p>
+<p><strong>Developed by: </strong><%= link_to @video_game.developer.name, @video_game.developer %></p>
+<p><strong>Published by: </strong><%= link_to @video_game.publisher.name, @video_game.publisher %></p>
 
-<p>Released for the <%= link_to @video_game.platform.name, @video_game.platform %> on <%= @video_game.release_date %>.</p>
+<p><strong>Released for the: </strong><%= link_to @video_game.platform.name, @video_game.platform %> on <%= @video_game.release_date %>.</p>
 
-<p>Summary: </p>
+<p><strong>Summary: </strong></p>
 <p><%= @video_game.summary %></p>
 
-<p>Metacritic Score: <%= @video_game.metacritic_score %></p>
-<p>User Score: <%= @video_game.user_score %></p>
-
+<p><strong>Metacritic Score: </strong><%= @video_game.metacritic_score %></p>
+<p><strong>User Score: </strong><%= @video_game.user_score %></p>
