@@ -1,2 +1,13 @@
-<h1>VideoGames#show</h1>
-<p>Find me in app/views/video_games/show.html.erb</p>
+<h1><%= @video_game.name %></h1>
+
+<p>Developed by: <%= @video_game.developer.name %></p>
+<p>Published by: <%= @video_game.publisher.name %></p>
+
+<p>Released for the <%= @video_game.platform.name %> on <%= @video_game.release_date %>.</p>
+
+<p>Summary: </p>
+<p><%= @video_game.summary %></p>
+
+<p>Metacritic Score: <%= @video_game.metacritic_score %></p>
+<p>User Score: <%= @video_game.user_score %></p>
+

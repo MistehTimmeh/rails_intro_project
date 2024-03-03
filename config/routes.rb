@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-  get 'platforms/index'
-  get 'platforms/show'
-  get 'publishers/index'
-  get 'publishers/show'
-  get 'developers/index'
-  get 'developers/show'
-  get 'video_games/index'
-  get 'video_games/show'
+  resources :video_games, only: [:index, :show]
+  resources :publishers, only: [:index, :show]
+  resources :developers, only: [:index, :show]
+  resources :platforms, only: [:index, :show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

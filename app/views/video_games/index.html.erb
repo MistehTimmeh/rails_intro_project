@@ -1,2 +1,9 @@
-<h1>VideoGames#index</h1>
-<p>Find me in app/views/video_games/index.html.erb</p>
+<h1>Top 200ish Video Game List</h1>
+
+<ul>
+    <% @video_games.each do |vg| %>
+    <li>
+        <%= link_to vg.name, vg %>
+    </li>
+    <% end%>
+</ul>
