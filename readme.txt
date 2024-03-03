@@ -22,3 +22,8 @@ Model: Publisher (Maps to database table publishers)
 - created_at: timestamp
 - updated_at: timestamp
 
+Model: Platform (Maps to database table platforms)
+- id: integer (Autoincrementing PK)
+- name: string
+- created_at: timestamp
+- updated_at: timestamp

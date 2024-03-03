@@ -8,6 +8,7 @@ one:
   user_score: 9.99
   publisher: one
   developer: one
+  platform: one
 
 two:
   name: MyString
@@ -17,3 +18,4 @@ two:
   user_score: 9.99
   publisher: two
   developer: two
+  platform: two
