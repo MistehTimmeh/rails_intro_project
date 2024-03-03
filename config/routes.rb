@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'platforms/index'
+  get 'platforms/show'
   get 'publishers/index'
   get 'publishers/show'
   get 'developers/index'
