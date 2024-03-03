@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'developers/index'
+  get 'developers/show'
   get 'video_games/index'
   get 'video_games/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
