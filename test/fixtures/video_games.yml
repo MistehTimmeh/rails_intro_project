@@ -2,7 +2,7 @@
 
 one:
   name: MyString
-  release_date: 2024-03-02
+  release_date: 2024-03-03
   summary: MyText
   metacritic_score: 9.99
   user_score: 9.99
@@ -12,7 +12,7 @@ one:
 
 two:
   name: MyString
-  release_date: 2024-03-02
+  release_date: 2024-03-03
   summary: MyText
   metacritic_score: 9.99
   user_score: 9.99
