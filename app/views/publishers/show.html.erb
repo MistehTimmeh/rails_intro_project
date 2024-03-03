@@ -1,2 +1,11 @@
-<h1>Publishers#show</h1>
-<p>Find me in app/views/publishers/show.html.erb</p>
+<h1><%= @publisher.name %></h1>
+
+<p>Games published by <%= @publisher.name%>:</p>
+
+<ul>
+    <% @publisher.video_games.each do |vg| %>
+    <li>
+        <p><%= link_to vg.name, vg%></p>
+    </li>
+    <% end %>
+</ul>
