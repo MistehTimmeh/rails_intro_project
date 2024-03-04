@@ -1,2 +1,56 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="columns">
+    <div class="column">
+        <h2 class="title is-2">
+            Top 25 Games
+        </h2>
+        <ol>
+            <% @video_games.each do |vg| %>
+            <li>
+                <%= link_to vg.name, vg%>
+                <em>
+                    (<%= vg.publisher.name%>)
+                </em>
+            </li>
+            <% end %>
+        </ol>
+        <p>
+            <strong>
+            <%= link_to "See all the top 200 games.", video_games_path%>
+            </strong>
+        </p>
+    </div>
+    <div class="column">
+        <h2 class="title is-2">
+            10 Developers of Top Games
+        </h2>
+        <ol>
+            <% @developers.each do |d| %>
+            <li>
+                <%= link_to d.name, d%>
+            </li>
+            <% end %>
+        </ol>
+        <p>
+            <strong>
+            <%= link_to "See all the developers of top games.", developers_path%>
+            </strong>
+        </p>
+    </div>
+    <div class="column">
+        <h2 class="title is-2">
+            10 Publishers of Top Games
+        </h2>
+        <ol>
+            <% @publishers.each do |d| %>
+            <li>
+                <%= link_to d.name, d%>
+            </li>
+            <% end %>
+        </ol>
+        <p>
+            <strong>
+            <%= link_to "See all the publishers of top games.", publishers_path%>
+            </strong>
+        </p>
+    </div>
+</div>

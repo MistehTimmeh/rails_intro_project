@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'about/index'
-  get 'home/index'
+  root to: "home#index"
+  resources :about, only: [:index]
   resources :video_games, only: [:index, :show]
   resources :publishers, only: [:index, :show]
   resources :developers, only: [:index, :show]
