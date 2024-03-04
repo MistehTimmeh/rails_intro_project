@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   resources :video_games, only: [:index, :show]
   resources :publishers, only: [:index, :show]
   resources :developers, only: [:index, :show]
