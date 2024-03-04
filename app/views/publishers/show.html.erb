@@ -4,7 +4,7 @@
 <ul>
     <% @publisher.video_games.each do |vg| %>
     <li>
-        <p><%= link_to "#{vg.name} (#{vg.platform.name} )", vg %></p>
+        <p><%= link_to "#{vg.name} - (#{vg.platform.name} )", vg %></p>
     </li>
     <% end %>
 </ul>

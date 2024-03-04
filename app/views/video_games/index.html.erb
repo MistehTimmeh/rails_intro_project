@@ -1,7 +1,7 @@
 <ul>
     <% @video_games.each do |vg| %>
     <li>
-        <%= link_to "#{vg.name} (#{vg.platform.name} )", vg %>
+        <%= link_to "#{vg.name} - (#{vg.platform.name} )", vg %>
     </li>
     <% end%>
 </ul>
