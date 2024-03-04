@@ -1,7 +1,12 @@
-<ul>
+<div class="columns is-multiline">
     <% @video_games.each do |vg| %>
-    <li>
+    <div class="column is-one-quarter">
+        <div>
+        <%= image_tag("#{vg.name}.png", :alt => "#{vg.name}", :size => "300")%>
+        </div>
+        <div>
         <%= link_to "#{vg.name} - (#{vg.platform.name} )", vg %>
-    </li>
-    <% end%>
-</ul>
+        </div>
+    </div>
+    <% end %>
+</div>
