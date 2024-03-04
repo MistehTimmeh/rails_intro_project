@@ -1,2 +1,7 @@
-<h1>About#index</h1>
-<p>Find me in app/views/about/index.html.erb</p>
+<% content_for(:html_title) {"About this Project"}%>
+<br>
+<p>This website is the end creation of a project for the Full Stack Web Development course at Red River Collegiate Polytechnic.</p>
+<p>The data used for this website is a subset of the <a href="https://www.kaggle.com/datasets/deepcontractor/top-video-games-19952021-metacritic/data">data source found here.</a></p>
+<br>
+<p>This is an ERD (Entity Relationship Diagram) of the database used for this website.</p>
+<%= image_tag("ERD Diagram.png", :alt => "ERD Diagram for the database", :size => "500")%>
