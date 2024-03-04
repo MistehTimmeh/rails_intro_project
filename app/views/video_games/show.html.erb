@@ -1,5 +1,4 @@
-<h4 class="title is-4"><%= @video_game.name %></h4>
-
+<% content_for(:html_title) {@video_game.name}%>
 <p><strong>Developed by: </strong><%= link_to @video_game.developer.name, @video_game.developer %></p>
 <p><strong>Published by: </strong><%= link_to @video_game.publisher.name, @video_game.publisher %></p>
 

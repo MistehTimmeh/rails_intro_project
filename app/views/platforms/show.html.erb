@@ -1,10 +1,10 @@
-<h2 class="title is-2"><%= @platform.name %></h2>
+<% content_for(:html_title) {@platform.name}%>
 <h4 class="subtitle is-4">Games available on <%= @platform.name%>:</h4>
 
 <ul>
     <% @platform.video_games.each do |vg| %>
     <li>
-        <p><%= link_to vg.name, vg%></p>
+        <p><%= link_to "#{vg.name} (#{vg.platform.name} )", vg %></p>
     </li>
     <% end %>
 </ul>
