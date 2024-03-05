@@ -1,6 +1,6 @@
 <% content_for(:html_title) {@video_game.name}%>
 <br>
-<%= image_tag("#{@video_game.name}.png", :alt => "#{@video_game.name}", :size => "500")%>
+<%= image_tag("video_games/#{@video_game.name}.png", :alt => "#{@video_game.name}", :size => "500")%>
 <p><strong>Developed by: </strong><%= link_to @video_game.developer.name, @video_game.developer %></p>
 <p><strong>Published by: </strong><%= link_to @video_game.publisher.name, @video_game.publisher %></p>
 
@@ -11,3 +11,5 @@
 
 <p><strong>Metacritic Score: </strong><%= @video_game.metacritic_score %></p>
 <p><strong>User Score: </strong><%= @video_game.user_score %></p>
+
+<a href="/video_games"><b>Return to all video games</b></a>

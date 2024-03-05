@@ -1,6 +1,6 @@
-<% content_for(:html_title) {"Developers"}%>
-<p>All developers:</p>
-<br>
+<p class="mb-5">
+    Found <%= pluralize(@developers.count, 'developer') %> when searching for: <%= params[:keywords] %>
+</p>
 <div class="columns is-multiline">
     <% @developers.each do |d| %>
     <div class="column is-one-quarter">

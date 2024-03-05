@@ -6,21 +6,25 @@ Rails.application.routes.draw do
       get "search"
     end
   end
+
   resources :publishers, only: [:index, :show] do
     collection do
       get "search"
     end
   end
+
   resources :developers, only: [:index, :show] do
     collection do
       get "search"
     end
   end
+
   resources :platforms, only: [:index, :show] do
     collection do
       get "search"
     end
   end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

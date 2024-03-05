@@ -12,10 +12,27 @@
   </head>
 
   <body>
+    <%= render "layouts/menu" %>
     <section class="section">
       <div class="container">
         <h1 class="title is-1">Top 200ish Games<%= " - " + yield(:html_title) if content_for?(:html_title)%></h1>
       </div>
+      <br>
+
+      <%= form_with(url: params[:type], method: :get, local: true) do |form| %>
+        <div class="field is-grouped mb-5">
+          <div class="control is-expanded">
+            <%= text_field_tag(:keywords, nil, class: "input", placeholder: "Enter a search query...") %>
+          </div>
+          <div class="control">
+            <%= form.select :type, [["Video Games", search_video_games_path], ["Developers", search_developers_path], ["Publishers", search_publishers_path], ["Platforms", search_platforms_path]] %>
+          </div>
+          <div class="control">
+            <%= submit_tag("Search", class:"button is-primary") %>
+          </div>
+        </div>
+      <% end %>
+
       <%= yield %>
     </section>
   </body>

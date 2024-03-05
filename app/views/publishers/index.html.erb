@@ -1,10 +1,13 @@
 <% content_for(:html_title) {"Publishers"}%>
-
-<ul>
+<p>All publishers:</p>
+<br>
+<div class="columns is-multiline">
     <% @publishers.each do |p| %>
-    <li>
-        <%= link_to p.name, p %>
-    </li>
-    <% end%>
-</ul>
+    <div class="column is-one-quarter">
+        <div>
+        <%= link_to "#{p.name}", p %>
+        </div>
+    </div>
+    <% end %>
+</div>
 

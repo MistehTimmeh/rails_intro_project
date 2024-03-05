@@ -1,7 +1,11 @@
 <% content_for(:html_title) {"About this Project"}%>
 <br>
 <p>This website is the end creation of a project for the Full Stack Web Development course at Red River Collegiate Polytechnic.</p>
+<br>
 <p>The data used for this website is a subset of the <a href="https://www.kaggle.com/datasets/deepcontractor/top-video-games-19952021-metacritic/data">data source found here.</a></p>
+<p>The data is organized into name, platforms, release date, summary, meta_score, and user_review columns containing strings, text, dates, decimals, etc.</p>
+<p>Alongside that data, I added the publishers and developers for the respective game to be added into separate tables.</p>
+<p>I sorted the data into four separate tables. The <b>video games table</b>, containing a majority of the data, and a table for <b>developers</b>, <b>publishers</b>, and <b>platforms</b>, containing their name.</p>
 <br>
 <p>This is an ERD (Entity Relationship Diagram) of the database used for this website.</p>
 <%= image_tag("ERD Diagram.png", :alt => "ERD Diagram for the database", :size => "500")%>

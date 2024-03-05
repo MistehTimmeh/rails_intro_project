@@ -1,8 +1,9 @@
-<% content_for(:html_title) {"Platforms"}%>
-<p>All platforms:</p>
-<br>
+<p class="mb-5">
+    Found <%= pluralize(@publishers.count, 'publisher') %> when searching for: <%= params[:keywords] %>
+</p>
+
 <div class="columns is-multiline">
-    <% @platforms.each do |p| %>
+    <% @publishers.each do |p| %>
     <div class="column is-one-quarter">
         <div>
         <%= link_to "#{p.name}", p %>

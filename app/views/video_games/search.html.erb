@@ -1,5 +1,6 @@
-<p>All games:</p>
-<br>
+<p class="mb-5">
+    Found <%= pluralize(@video_games.count, 'video game') %> when searching for: <%= params[:keywords] %>
+</p>
 <div class="columns is-multiline">
     <% @video_games.each do |vg| %>
     <div class="column is-one-quarter">
