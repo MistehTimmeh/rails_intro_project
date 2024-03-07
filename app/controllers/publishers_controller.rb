@@ -9,6 +9,6 @@ class PublishersController < ApplicationController
 
   def search
     wildcard_search = "%#{params[:keywords]}%"
-    @publishers = Publishers.where("name LIKE ?", wildcard_search)
+    @publishers = Publisher.where("name LIKE ?", wildcard_search)
   end
 end

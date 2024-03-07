@@ -6,7 +6,7 @@
     <% @platform.video_games.each do |vg| %>
         <div class="column is-one-quarter">
             <div>
-                <%= image_tag("video_games/#{vg.name}.png", :alt => "#{vg.name}", :size => "300")%>
+                <%= image_tag("video_games/#{vg.name.gsub(/\s+/, "")}.png", :alt => "#{vg.name}", :size => "300")%>
             </div>
             <div>
                 <%= link_to "#{vg.name} - (#{vg.platform.name} )", vg %>
