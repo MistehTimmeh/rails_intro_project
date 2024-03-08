@@ -12,4 +12,50 @@
 <p><strong>Metacritic Score: </strong><%= @video_game.metacritic_score %></p>
 <p><strong>User Score: </strong><%= @video_game.user_score %></p>
 
+<p>Other games developed by <%= link_to @video_game.developer.name, @video_game.developer %>:</p>
+
+<div class="columns is-multiline">
+    <% @developer.video_games.each do |vg| %>
+        <div class="column is-one-fourth">
+            <div>
+                <%= image_tag("video_games/#{vg.name.gsub(/\s+/, "")}.png", :alt => "#{vg.name}", :size => "150")%>
+            </div>
+            <div>
+                <%= link_to "#{vg.name} - (#{vg.platform.name} )", vg %>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<p>Other games published by <%= link_to @video_game.publisher.name, @video_game.publisher %>:</p>
+
+<div class="columns is-multiline">
+    <% @publisher.video_games.each do |vg| %>
+        <div class="column is-one-fourth">
+            <div>
+                <%= image_tag("video_games/#{vg.name.gsub(/\s+/, "")}.png", :alt => "#{vg.name}", :size => "150")%>
+            </div>
+            <div>
+                <%= link_to "#{vg.name} - (#{vg.platform.name} )", vg %>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<p>Other games available on <%= link_to @video_game.platform.name, @video_game.platform %>:</p>
+
+<div class="columns is-multiline">
+    <% @platform.video_games.each do |vg| %>
+        <div class="column is-one-fourth">
+            <div>
+                <%= image_tag("video_games/#{vg.name.gsub(/\s+/, "")}.png", :alt => "#{vg.name}", :size => "150")%>
+            </div>
+            <div>
+                <%= link_to "#{vg.name} - (#{vg.platform.name} )", vg %>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+
 <a href="/video_games"><b>Return to all video games</b></a>

@@ -5,6 +5,9 @@ class VideoGamesController < ApplicationController
 
   def show
     @video_game = VideoGame.find(params[:id])
+    @developer = Developer.joins(:video_games).where("video_games.id = ?", params[:id]).first
+    @publisher = Publisher.joins(:video_games).where("video_games.id = ?", params[:id]).first
+    @platform = Platform.joins(:video_games).where("video_games.id = ?", params[:id]).first
   end
 
   def search
