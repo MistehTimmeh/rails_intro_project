@@ -1,4 +1,4 @@
-<% content_for(:html_title) {@video_game.name}%>
+<% content_for(:html_title) {raw @video_game.name}%>
 <br>
 <%= image_tag("video_games/#{@video_game.name.gsub(/\s+/, "")}.png", :alt => "#{@video_game.name}", :size => "500")%>
 <p><strong>Developed by: </strong><%= link_to @video_game.developer.name, @video_game.developer %></p>
